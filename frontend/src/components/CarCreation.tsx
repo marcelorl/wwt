@@ -27,12 +27,8 @@ const style = {
   p: 4,
 };
 
-type Props = {
-  isOpen: boolean;
-  setIsOpen: (o: boolean) => void;
-};
-
-export const CarCreation = ({ isOpen, setIsOpen }: Props) => {
+export const CarCreation = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const mutation = useCreateCar(() => setIsOpen(false));
 
   return (

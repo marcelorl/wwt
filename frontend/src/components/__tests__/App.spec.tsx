@@ -1,6 +1,6 @@
 import React from 'react';
 import { describe, test, expect } from 'vitest';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { App } from '../App';
 
@@ -15,8 +15,8 @@ const renderComponent = () =>
 
 describe.skip('#App', () => {
   test('renders loading state initially', () => {
-    renderComponent();
-    expect(screen.getByText(/loading/i)).toMatchSnapshot();
+    const { getByText } = renderComponent();
+    expect(getByText(/loading/i)).toBeTruthy();
   });
 
   test('renders table after loading', async () => {
