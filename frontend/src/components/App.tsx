@@ -11,7 +11,9 @@ import { CarCreation } from './CarCreation';
 import { useCars } from '../hooks/useCars';
 
 export function App() {
-  const { data, isLoading } = useCars({ notifyOnChangeProps: ['data'] });
+  const { data, isLoading } = useCars({
+    notifyOnChangeProps: ['data'],
+  });
 
   if (isLoading) return <div>Loading...</div>;
 
@@ -24,7 +26,6 @@ export function App() {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>ID</TableCell>
             <TableCell>Make</TableCell>
             <TableCell>Model</TableCell>
             <TableCell>Package</TableCell>
@@ -38,7 +39,6 @@ export function App() {
         <TableBody>
           {data?.map((car) => (
             <TableRow key={car.id}>
-              <TableCell>{car.id}</TableCell>
               <TableCell>{car.make}</TableCell>
               <TableCell>{car.model}</TableCell>
               <TableCell>{car.package}</TableCell>

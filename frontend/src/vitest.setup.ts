@@ -1,6 +1,6 @@
 import { afterAll, afterEach, beforeAll } from 'vitest';
 import { setupServer } from 'msw/node';
-import { HttpResponse, graphql, http } from 'msw';
+import { HttpResponse, http } from 'msw';
 
 const cars = [
   {
@@ -20,15 +20,15 @@ export const restHandlers = [
   http.get('http://localhost:3000/api/cars', () => {
     return HttpResponse.json(cars);
   }),
+  http.post('http://localhost:3000/api/cars', () => {
+    return HttpResponse.json({});
+  }),
 ];
 
 const server = setupServer(...restHandlers);
 
-// Start server before all tests
 beforeAll(() => server.listen({ onUnhandledRequest: 'error' }));
 
-//  Close server after all tests
 afterAll(() => server.close());
 
-// Reset handlers after each test `important for test isolation`
 afterEach(() => server.resetHandlers());

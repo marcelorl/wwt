@@ -10,6 +10,9 @@ npm start
 # migration commands ran
 npx typeorm migration:create src/migrations/CarTable
 npx typeorm migration:run -d src/components/data.source
+
+# tests
+nxp test frontend
 ```
 
 ## Technologies used
@@ -29,3 +32,4 @@ npx typeorm migration:run -d src/components/data.source
  - yup
  - react-query
  - axios
+ - vitest
