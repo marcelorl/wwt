@@ -1,0 +1,415 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`#CarCreation > renders Add Car button and modal 1`] = `
+<body
+  style="padding-right: 1024px; overflow: hidden;"
+>
+  <div
+    aria-hidden="true"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      Add Car
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+  <div
+    aria-describedby="modal-modal-description"
+    aria-labelledby="modal-modal-title"
+    class="MuiModal-root css-79ws1d-MuiModal-root"
+    role="presentation"
+  >
+    <div
+      aria-hidden="true"
+      class="MuiBackdrop-root MuiModal-backdrop css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop"
+      style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+    />
+    <div
+      data-testid="sentinelStart"
+      tabindex="0"
+    />
+    <div
+      class="MuiBox-root css-1acyv19"
+      tabindex="-1"
+    >
+      <form
+        action="#"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+          id="modal-modal-title"
+        >
+          Create new Car
+        </h2>
+        <div
+          class="MuiBox-root css-0"
+        >
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          >
+            <label
+              for="make"
+            >
+              make
+            </label>
+            <input
+              id="make"
+              name="make"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          >
+            <label
+              for="model"
+            >
+              model
+            </label>
+            <input
+              id="model"
+              name="model"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          >
+            <label
+              for="package"
+            >
+              package
+            </label>
+            <input
+              id="package"
+              name="package"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          >
+            <label
+              for="color"
+            >
+              color
+            </label>
+            <input
+              id="color"
+              name="color"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          >
+            <label
+              for="year"
+            >
+              year
+            </label>
+            <input
+              id="year"
+              name="year"
+              type="number"
+              value="0"
+            />
+          </div>
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          >
+            <label
+              for="category"
+            >
+              category
+            </label>
+            <input
+              id="category"
+              name="category"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          >
+            <label
+              for="mileage"
+            >
+              mileage
+            </label>
+            <input
+              id="mileage"
+              name="mileage"
+              type="number"
+              value="0"
+            />
+          </div>
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          >
+            <label
+              for="price"
+            >
+              price
+            </label>
+            <input
+              id="price"
+              name="price"
+              type="number"
+              value="0"
+            />
+          </div>
+        </div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="submit"
+        >
+          Submit
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </form>
+    </div>
+    <div
+      data-testid="sentinelEnd"
+      tabindex="0"
+    />
+  </div>
+</body>
+`;
+
+exports[`#CarCreation > validates form submission 1`] = `
+<body
+  style="padding-right: 1024px; overflow: hidden;"
+>
+  <div
+    aria-hidden="true"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      Add Car
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+  <div
+    aria-describedby="modal-modal-description"
+    aria-labelledby="modal-modal-title"
+    class="MuiModal-root css-79ws1d-MuiModal-root"
+    role="presentation"
+  >
+    <div
+      aria-hidden="true"
+      class="MuiBackdrop-root MuiModal-backdrop css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop"
+      style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+    />
+    <div
+      data-testid="sentinelStart"
+      tabindex="0"
+    />
+    <div
+      class="MuiBox-root css-1acyv19"
+      tabindex="-1"
+    >
+      <form
+        action="#"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+          id="modal-modal-title"
+        >
+          Create new Car
+        </h2>
+        <div
+          class="MuiBox-root css-0"
+        >
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          >
+            <label
+              for="make"
+            >
+              make
+            </label>
+            <input
+              id="make"
+              name="make"
+              type="text"
+              value=""
+            />
+            <div
+              style="color: red;"
+            >
+              Required
+            </div>
+          </div>
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          >
+            <label
+              for="model"
+            >
+              model
+            </label>
+            <input
+              id="model"
+              name="model"
+              type="text"
+              value=""
+            />
+            <div
+              style="color: red;"
+            >
+              Required
+            </div>
+          </div>
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          >
+            <label
+              for="package"
+            >
+              package
+            </label>
+            <input
+              id="package"
+              name="package"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          >
+            <label
+              for="color"
+            >
+              color
+            </label>
+            <input
+              id="color"
+              name="color"
+              type="text"
+              value=""
+            />
+            <div
+              style="color: red;"
+            >
+              Required
+            </div>
+          </div>
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          >
+            <label
+              for="year"
+            >
+              year
+            </label>
+            <input
+              id="year"
+              name="year"
+              type="number"
+              value="2030"
+            />
+            <div
+              style="color: red;"
+            >
+              Invalid year
+            </div>
+          </div>
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          >
+            <label
+              for="category"
+            >
+              category
+            </label>
+            <input
+              id="category"
+              name="category"
+              type="text"
+              value=""
+            />
+            <div
+              style="color: red;"
+            >
+              Required
+            </div>
+          </div>
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          >
+            <label
+              for="mileage"
+            >
+              mileage
+            </label>
+            <input
+              id="mileage"
+              name="mileage"
+              type="number"
+              value="0"
+            />
+          </div>
+          <div
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          >
+            <label
+              for="price"
+            >
+              price
+            </label>
+            <input
+              id="price"
+              name="price"
+              type="number"
+              value="0"
+            />
+          </div>
+        </div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="submit"
+        >
+          Submit
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          >
+            <span
+              class="css-y4cjyz-MuiTouchRipple-ripple MuiTouchRipple-ripple MuiTouchRipple-rippleVisible"
+              style="width: 2.8284271247461903px; height: 2.8284271247461903px; top: -1.4142135623730951px; left: -1.4142135623730951px;"
+            >
+              <span
+                class="MuiTouchRipple-child MuiTouchRipple-childLeaving"
+              />
+            </span>
+          </span>
+        </button>
+      </form>
+    </div>
+    <div
+      data-testid="sentinelEnd"
+      tabindex="0"
+    />
+  </div>
+</body>
+`;

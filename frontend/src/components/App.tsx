@@ -1,5 +1,3 @@
-import { useQuery } from 'react-query';
-import { fetchCars } from '../services/cars';
 import {
   Box,
   Table,
@@ -11,8 +9,10 @@ import {
 } from '@mui/material';
 import { CarCreation } from './CarCreation';
 import { useCars } from '../hooks/useCars';
+import { useState } from 'react';
 
 export function App() {
+  const [isOpen, setIsOpen] = useState(false);
   const { data, isLoading } = useCars({ notifyOnChangeProps: ['data'] });
 
   if (isLoading) return <div>Loading...</div>;
@@ -20,7 +20,7 @@ export function App() {
   return (
     <TableContainer>
       <Box width="100%" justifyContent="flex-end" display="flex">
-        <CarCreation />
+        <CarCreation isOpen={isOpen} setIsOpen={setIsOpen} />
       </Box>
 
       <Table>

@@ -27,18 +27,20 @@ const style = {
   p: 4,
 };
 
-export const CarCreation = () => {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-  const mutation = useCreateCar(handleClose);
+type Props = {
+  isOpen: boolean;
+  setIsOpen: (o: boolean) => void;
+};
+
+export const CarCreation = ({ isOpen, setIsOpen }: Props) => {
+  const mutation = useCreateCar(() => setIsOpen(false));
 
   return (
     <>
-      <Button onClick={handleOpen}>Add Car</Button>
+      <Button onClick={() => setIsOpen(true)}>Add Car</Button>
       <Modal
-        open={open}
-        onClose={handleClose}
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >

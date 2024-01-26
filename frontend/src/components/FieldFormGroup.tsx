@@ -14,8 +14,8 @@ export const FieldFormGroup = ({
   const hasError = meta.error && meta.touched;
   return (
     <FormGroup>
-      <label>{field}</label>
-      <Field name={field} type={type} />
+      <label htmlFor={field}>{field}</label>
+      <Field name={field} type={type} id={field} />
       {hasError ? <div style={{ color: 'red' }}>{meta.error}</div> : null}
     </FormGroup>
   );
