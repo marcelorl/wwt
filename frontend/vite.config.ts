@@ -8,11 +8,14 @@ export default defineConfig({
 
   server: {
     port: 4200,
-    host: 'localhost',
+    strictPort: true,
+    host: true,
+    origin: 'http://0.0.0.0:4200',
   },
 
   preview: {
     port: 4300,
+    strictPort: true,
     host: 'localhost',
   },
 

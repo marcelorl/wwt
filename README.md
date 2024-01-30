@@ -5,7 +5,7 @@
 ps. you need docker installed
 ```bash
 # Start up the project, both backend and frontend
-npm start
+npm run dev
 
 # migration commands ran
 npx typeorm migration:create src/migrations/CarTable

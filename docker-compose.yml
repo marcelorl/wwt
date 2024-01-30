@@ -1,22 +1,21 @@
 version: '3.8'
 services:
-#  components:
-#    build:
-#      dockerfile: ./Dockerfile
-#      context: .
-#    command: nx run-many --target=serve --all
-#    ports:
-#      - "3000:3000"
-#      - "4200:4200"
-#    environment:
-#      DATABASE_URL: postgres://postgres:password@db:5432/mydb
-#    depends_on:
-#      - db
-#    volumes:
-#      - .:/wwt
-#      - /wwt/node_modules
-#    networks:
-#      wwt-network:
+  app:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    ports:
+      - "3000:3000"
+      - "4200:4200"
+    environment:
+      DATABASE_URL: postgres://postgres:password@db:5432/mydb
+    depends_on:
+      - db
+    volumes:
+      - .:/wwt
+      - /wwt/node_modules
+    networks:
+      wwt-network:
   db:
     image: postgres
     ports:

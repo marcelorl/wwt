@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "prestart": "docker-compose up --build -d",
-    "start": "nx run-many --target=serve --all",
+    "dev": "docker-compose up",
     "test:frontend": "nx test frontend"
   },
   "private": true,
