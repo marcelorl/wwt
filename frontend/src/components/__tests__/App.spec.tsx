@@ -4,14 +4,17 @@ import { render, waitFor } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { App } from '../App';
 import userEvent from '@testing-library/user-event';
+import { SnackbarProvider } from 'notistack';
 
 const queryClient = new QueryClient();
 
 const renderComponent = () =>
   render(
-    <QueryClientProvider client={queryClient}>
-      <App />
-    </QueryClientProvider>
+    <SnackbarProvider>
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>
+    </SnackbarProvider>
   );
 
 describe('#App', () => {
@@ -28,7 +31,7 @@ describe('#App', () => {
     expect(container).toMatchSnapshot();
   });
 
-  test.skip('form submission - UNFINISHED', async () => {
+  test('form submission - UNFINISHED', async () => {
     const { queryByText, getByText, getByLabelText, baseElement } =
       renderComponent();
 
@@ -45,6 +48,10 @@ describe('#App', () => {
     await waitFor(() => userEvent.type(getByLabelText('price'), '0'));
 
     await waitFor(() => userEvent.click(getByText(/submit/i)));
+
+    await waitFor(() =>
+      expect(queryByText(/Car created successfully/i)).toBeTruthy()
+    );
 
     expect(baseElement).toMatchSnapshot();
   });

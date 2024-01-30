@@ -12,7 +12,7 @@ npx typeorm migration:create src/migrations/CarTable
 npx typeorm migration:run -d src/components/data.source
 
 # tests
-nxp test frontend
+npm run test:frontend
 ```
 
 ## Technologies used

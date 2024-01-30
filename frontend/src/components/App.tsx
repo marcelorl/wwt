@@ -11,9 +11,7 @@ import { CarCreation } from './CarCreation';
 import { useCars } from '../hooks/useCars';
 
 export function App() {
-  const { data, isLoading } = useCars({
-    notifyOnChangeProps: ['data'],
-  });
+  const { data, isLoading } = useCars();
 
   if (isLoading) return <div>Loading...</div>;
 
