@@ -1,12 +1,12 @@
 version: '3.8'
 services:
-  app:
+  backend:
+    container_name: backend
     build:
-      dockerfile: ./Dockerfile
+      dockerfile: backend/Dockerfile
       context: .
     ports:
       - "3000:3000"
-      - "4200:4200"
     environment:
       DATABASE_URL: postgres://postgres:password@db:5432/mydb
     depends_on:
@@ -16,7 +16,22 @@ services:
       - /wwt/node_modules
     networks:
       wwt-network:
+  frontend:
+    container_name: frontend
+    build:
+      dockerfile: frontend/Dockerfile
+      context: .
+    ports:
+      - "4200:4200"
+    depends_on:
+      - backend
+    volumes:
+      - .:/wwt
+      - /wwt/node_modules
+    networks:
+      wwt-network:
   db:
+    container_name: db
     image: postgres
     ports:
       - "5432:5432"

@@ -7,7 +7,7 @@ ps. you need docker installed
 # Start up the project, both backend and frontend
 npm run dev
 
-# migration commands ran
+# migration commands - inside the backend container
 npx typeorm migration:create src/migrations/CarTable
 npx typeorm migration:run -d src/components/data.source
 
